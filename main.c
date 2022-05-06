@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 13:39:53 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 20:48:15 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/05/05 21:50:58 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
+#include <ctype.h>
 
-int	ft_isalpha(int c)
+
+
+int main(int argc, char *argv[])
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+    
+    int x = ft_tolower('C');
+    int y = tolower('C');
+
+    printf("%c\n",x);
+    printf("%c\n",y);
+    
+    return 0;
 }

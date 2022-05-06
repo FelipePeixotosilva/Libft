@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 13:39:53 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 20:48:15 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/05/05 20:57:14 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/05/05 21:02:18 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int ft_isalnum(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+    if ((ft_isalpha(c) || ft_isdigit(c)) == 1)
+    {
+        return (1);
+    }
+    return (0);
 }
