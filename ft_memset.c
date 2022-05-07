@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 13:12:31 by fpeixoto         ###   ########.fr       */
+/*   Created: 2022/05/07 11:57:17 by fpeixoto          #+#    #+#             */
+/*   Updated: 2022/05/07 13:16:05 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <ctype.h>
-#include <string.h>
 
-
-
-int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_memset(str,'U',7);
-   puts(str);
-   
-   return(0);
+void *ft_memset(void *str, int c, size_t n)
+{
+    int i;
+    char *ptr;
+    ptr = str;
+    i = 0; 
+    while (n > 0)
+    {
+        ptr[i++] = c;
+        n--;
+    }
+    return str;
 }

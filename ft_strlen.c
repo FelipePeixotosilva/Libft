@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 13:12:31 by fpeixoto         ###   ########.fr       */
+/*   Created: 2022/05/07 10:50:13 by fpeixoto          #+#    #+#             */
+/*   Updated: 2022/05/07 13:10:39 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <ctype.h>
-#include <string.h>
 
+int ft_strlen (char *str)
+{
+    int i;
 
+    i = 0;
 
-int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_memset(str,'U',7);
-   puts(str);
-   
-   return(0);
+    while (str[i] != '\0')
+    {   
+        if ((ft_isascii(str[i]) == 1))
+        {
+            i++;
+        }
+    
+    }
+return i;
 }
