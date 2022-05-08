@@ -6,17 +6,17 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 20:57:14 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 21:02:18 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/07 21:36:22 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if ((ft_isalpha(c) || ft_isdigit(c)) == 1)
-    {
-        return (1);
-    }
-    return (0);
+	if ((ft_isalpha(c) || ft_isdigit(c)) == 1)
+	{
+		return (1);
+	}
+	return (0);
 }

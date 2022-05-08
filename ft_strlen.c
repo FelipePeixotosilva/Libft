@@ -3,28 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 10:50:13 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/05/07 13:10:39 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/05/07 21:24:25 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen (char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-
-    while (str[i] != '\0')
-    {   
-        if ((ft_isascii(str[i]) == 1))
-        {
-            i++;
-        }
-    
-    }
-return i;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((ft_isascii(str[i]) == 1))
+		{
+			i++;
+		}
+	}
+	return (i);
 }

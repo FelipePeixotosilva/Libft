@@ -6,17 +6,17 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:39:29 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 21:47:47 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/07 21:38:34 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if(c >= 65 && c <= 90)
-    {
-        return c + 32;
-    }
-    return c;
+	if (c >= 65 && c <= 90)
+	{
+		return (c + 32);
+	}
+	return (c);
 }

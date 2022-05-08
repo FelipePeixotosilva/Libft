@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 21:29:38 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 10:46:36 by fpeixoto         ###   ########.fr       */
+/*   Created: 2022/05/05 21:18:50 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/05/07 18:46:06 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sprint(int c)
+#include "libft.h"
+
+int	ft_sprint(int c)
 {
-    if (c >= 32 && c <= 126)
-    {
-        return 1;
-    }
-    return 0;
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	return (0);
 }

@@ -6,17 +6,17 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:05:30 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 21:08:32 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/07 18:40:43 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 255)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 0 && c <= 255)
+	{
+		return (1);
+	}
+	return (0);
 }
