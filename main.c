@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 13:12:31 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/05/10 20:13:50 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 
 
 int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_memset(str,'U',7);
-   puts(str);
    
+char s40[50], s41[50];
+	strcpy(s40, "felipe");
+	strcpy(s41, "beatriz");
+   memmove(s40, s41, 3);
+	printf("%s\n", s40);
+	printf("-----------------------------------------------------------------------------\n");
+
    return(0);
 }

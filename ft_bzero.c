@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 21:29:38 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/10 19:45:29 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/05/08 21:47:30 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/05/08 22:16:20 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
+void	ft_bzero(void *s, size_t n)
+{
+	char	*ptr;
+	int		i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_sprint(int c);
-int		ft_strlen(char *str);
-void	*ft_memset(void *str, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *str1, const void *str2, size_t n);
-
-
-#endif
+	ptr	=	s;
+	i	=	0;	
+	while (n > 0)
+	{
+		ptr[i++]	=	'\0';
+		n--;
+	}
+}
