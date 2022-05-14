@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 20:06:06 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/12 13:20:27 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/14 11:19:26 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
 		n--;
 		i++;
 	}
+	return (dst);
 }

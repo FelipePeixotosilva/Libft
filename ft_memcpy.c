@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 20:19:02 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/10 20:02:16 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/14 10:57:05 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void	*ft_memcpy(void *str1, const void *str2, size_t n)
 		ptr1[i] = (*(char *)str2++);
 		i++;
 		n--;
-	} 
+	}
+	return (ptr1); 
 }
