@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/10 20:13:50 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/14 12:07:24 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,15 @@
 int main () {
    
 char s40[50], s41[50];
-	strcpy(s40, "felipe");
-	strcpy(s41, "beatriz");
-   memmove(s40, s41, 3);
-	printf("%s\n", s40);
-	printf("-----------------------------------------------------------------------------\n");
+   
+   char dest[] = "oldstring";
+   char src[]  = "newstring";
+
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   memmove(dest, src, 9);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
+   ft_memmove(dest, src, 9);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
 
    return(0);
 }

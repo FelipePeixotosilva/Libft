@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 11:57:17 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/05/07 21:21:11 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/14 11:32:29 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *str, int c, size_t n)
 		ptr[i++] = c;
 		n--;
 	}
-	return (str);
+	return (ptr);
 }
