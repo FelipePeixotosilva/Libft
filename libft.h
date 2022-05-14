@@ -6,7 +6,7 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:29:38 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/10 19:45:29 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/12 19:05:22 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_sprint(int c);
+int		ft_isprint(int c);
 int		ft_strlen(char *str);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *str1, const void *str2, size_t n);
+size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 
 #endif

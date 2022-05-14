@@ -6,13 +6,13 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:18:50 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 18:46:06 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/12 19:05:17 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_sprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
