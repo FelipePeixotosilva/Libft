@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 17:54:23 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/12 19:07:16 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/14 13:07:07 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		}
 		dst [cont++] = '\0';
 	}
-
+	return (*(char *)dst);
 }
