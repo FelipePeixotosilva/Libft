@@ -6,7 +6,11 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:29:38 by Felipe Peix       #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/14 10:54:43 by fpeixoto         ###   ########.fr       */
+=======
+/*   Updated: 2022/05/14 12:04:15 by fpeixoto         ###   ########.fr       */
+>>>>>>> temp-branch
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +30,11 @@ int		ft_strlen(char *str);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *str1, const void *str2, size_t n);
+<<<<<<< HEAD
 size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+=======
+>>>>>>> temp-branch
 void    *ft_memmove(void *dst, const void *src, size_t len);
 
 
