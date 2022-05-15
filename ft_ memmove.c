@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ memmove.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 10:55:51 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/14 13:15:02 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/05/14 22:16:11 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "libc.h"
+#include "libft.h"
 
 void    *ft_memmove(void *dst, const void *src, size_t len)
 {

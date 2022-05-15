@@ -3,16 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/05/14 10:52:03 by fpeixoto         ###   ########.fr       */
-=======
-/*   Updated: 2022/05/14 12:07:24 by fpeixoto         ###   ########.fr       */
->>>>>>> temp-branch
+/*   Updated: 2022/05/14 22:15:40 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <stdio.h>
 #include "libft.h"
@@ -23,9 +20,6 @@
 
 int main () {
    
-char s40[50], s41[50];
-<<<<<<< HEAD
-=======
    
    char dest[] = "oldstring";
    char src[]  = "newstring";
@@ -35,13 +29,6 @@ char s40[50], s41[50];
    printf("After memmove dest = %s, src = %s\n", dest, src);
    ft_memmove(dest, src, 9);
    printf("After memmove dest = %s, src = %s\n", dest, src);
->>>>>>> temp-branch
 
-	char tam[]= "minha nossa";
-	char fel[15];
-	
-	memmove(fel,tam, sizeof(fel));
-
-	printf("%s \n",fel);
    return(0);
 }
