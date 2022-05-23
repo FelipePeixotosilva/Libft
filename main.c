@@ -6,7 +6,7 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:15:35 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/15 18:04:50 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/05/22 19:32:40 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 int main () {
    
    
-   char dest[] = "oldstring";
-   char src[]  = "newstring";
-   printf("%s\n",ft_strchr(dest,'s'));
+   char dest[] = "Pedro Dias";
+   char src[]  = "Pedro Henrique";
+   char *pos = ft_memchr(dest,'d',sizeof(dest));
+   printf("%s\n",pos);
    return(0);
 }
