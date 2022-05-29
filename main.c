@@ -18,12 +18,44 @@
 
 
 
-int main () {
+int main () 
+{   
+ /*  char dest[50] = "Tudo";
+   char src[30] = "ok por aqui!";
+
+   printf("%ld\n", sizeof(dest));
+   printf("antes %s\n", dest);
    
-   
-   char dest[] = "Pedro Dias";
-   char src[]  = "Pedro Henrique";
-   char *pos = ft_memchr(dest,'d',sizeof(dest));
-   printf("%s\n",pos);
+   printf("%u \n",ft_strlcat(dest,src,sizeof(dest)));
+   printf("%ld\n",ft_strlen(dest));
+   printf("depois %s\n", dest);
+ */  
+/* ---MEMSET---	
+	char test[10];
+	memset(test, 'a',12);
+	printf("%s", test);
+*/
+/*	---BZERO--
+ *	char test[] = "testando";
+	printf("%s\n", test);
+	ft_bzero(test,8);
+	printf("%s\n", test);
+*/
+/*	char test1 [] = "testendo";
+	char test2 [30];
+	ft_memcpy(test2, test1, sizeof(test2));
+	printf("%s", test2);
+*/
+/*	char test1[] = "testando";
+	char test2[30];
+	ft_memmove(test2,test1,sizeof(test2));
+	printf("%s", test2);
+*/
+/*	char test1[] = "testando";
+	char test2[30];
+	ft_strlcpy(test2,test1,sizeof(test2));
+	printf("%s", test2);
+*/
+
    return(0);
 }
