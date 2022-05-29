@@ -57,5 +57,5 @@ int main ()
 	printf("%s", test2);
 */
 
-   return(0);
+    return(0);
 }
