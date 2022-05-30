@@ -21,5 +21,6 @@ char *ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
+	ptr[pos] = '\0';
 	return (ptr);	
 }
