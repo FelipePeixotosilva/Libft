@@ -1,31 +1,28 @@
+#include "libft.h"
+
 char *ft_strrchr(const char *s, int c)
 {
 	int i;
-	int pos;
 	char *ptr;
-	
-	i = 0;
+	int pos;
+
+	i = ft_strlen(s);
 	pos = 0;
-	ptr = (char *)s;
 
-
-	while (s[i] != '\0')
+	while((i > 0) && (i <= ft_strlen(s)))
 	{
-		if (s[i] == c)
+		if(s[i] == c)
 		{
-			pos = i;
+			while(s[i] != '\0')
+			{
+				ptr[pos] = s[i];
+				pos++;
+				i++;
+			}
+			i = 0;
 		}
-		i++;
+		i--;
 	}
-	i = 0;
-	while (s[pos] != '\0')
-	{
-		ptr[i] = s[pos];
-		i++;
-		pos++;
-	}
-
-	ptr[pos++] = '\0';
-	return ptr;	
-
+	ptr[pos] = '\0';	
+	return (ptr);
 }

@@ -56,6 +56,10 @@ int main ()
 	ft_strlcpy(test2,test1,sizeof(test2));
 	printf("%s", test2);
 */
+	char test[] = "testando";
+	char test2[] = "ok";
+	printf("%s",strrchr(test,'t'));
+	
 
     return(0);
 }

@@ -1,27 +1,25 @@
 #include "libft.h"
-// imprimindo a string de dois vetores 
+ 
 char *ft_strchr(const char *s, int c)
 {
-	char *ptr;
 	int i;
-	int cont;
-
-	cont = 0;
+	char *ptr;
+	int pos;
 	i = 0;
-	ptr = (char *)s;
-	while (s[i] != '\0')
+	pos = 0;
+
+	while (i <= ft_strlen(s))
 	{
 		if(s[i] == c)
 		{
 			while(s[i] != '\0')
 			{
-			ptr[cont] = s[i];
-			i++;
-			cont++;
+				ptr[pos] = s[i];
+				i++;
+				pos++;
 			}
 		}
 		i++;
 	}
-	ptr[cont++] = '\0';
-	return ptr;	
+	return (ptr);	
 }
