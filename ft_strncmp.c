@@ -1,21 +1,24 @@
 #include "libft.h"
+
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	if((ft_strlen(s1) - n) == (ft_strlen(s2) - n))
-	{
-		return 0;
-	}
-	else if((ft_strlen(s1) - n) > (ft_strlen(s2) - n))
 
+	while ((n > 0) && (s1[i] || s2[i]) != '\0')
 	{
-		return (ft_strlen(s1) - ft_strlen(s2));
-	}
-	else
-	{
-		return (ft_strlen(s1) - ft_strlen(s2));
-	}
 	
+		if(s1[i] != s2[i])
+		{
+			return s1[i] - s2[i];
+		}
+
+		n--;
+		i++;
+	 
+	}
+	i--;
+		return s1[i] - s2[i];
+
 }
