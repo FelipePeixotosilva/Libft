@@ -20,16 +20,14 @@
 
 int main () 
 {   
- /*  char dest[50] = "Tudo";
-   char src[30] = "ok por aqui!";
+  /* char dest[50] = "Tudo";
+   char src[] = "ok por aqui!";
 
-   printf("%ld\n", sizeof(dest));
    printf("antes %s\n", dest);
-   
-   printf("%u \n",ft_strlcat(dest,src,sizeof(dest)));
-   printf("%ld\n",ft_strlen(dest));
+   printf("%lu \n",strlcat(dest,src,1));
    printf("depois %s\n", dest);
- */  
+ */
+   
 /* ---MEMSET---	
 	char test[10];
 	memset(test, 'a',12);
@@ -61,11 +59,15 @@ int main ()
 	char test2[] = "ok";
 	printf("%s",ft_strrchr(test,'t'));
 */	
-	char test1[] = "testando";
-	char test2[] = "ok";
+/*	char test1[] = "1";
+	char test2[] = "4";
 
-	printf("%d", ft_strncmp(test2,test1,sizeof(test1)));
-
-
+	printf("%d\n", ft_strncmp(test1,test2,4));
+	printf("%d\n", strncmp(test1,test2,4));
+*/
+   char test1[] = "";
+ 	printf("%s\n",ft_memchr( test1, 's', 5));
+	
     return(0);
 }
+
