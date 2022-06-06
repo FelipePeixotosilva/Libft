@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 16:19:12 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 20:42:12 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/06/05 02:00:33 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 02:05:24 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
