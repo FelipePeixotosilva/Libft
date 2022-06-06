@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/08 21:47:30 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/08 22:16:20 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/06/05 03:09:18 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 03:13:05 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
-	int		i;
-
-	ptr	=	s;
-	i	=	0;	
-	while (n > 0)
-	{
-		ptr[i++]	=	0;
-		n--;
-	}
+	ft_memset(s, 0, n);
 }
