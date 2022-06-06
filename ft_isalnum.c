@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 20:57:14 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 21:36:22 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/06/05 02:08:26 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 02:50:27 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((ft_isalpha(c) || ft_isdigit(c)) == 1)
+	if ((ft_isalpha(c) || ft_isdigit(c)))
 	{
 		return (1);
 	}
