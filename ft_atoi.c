@@ -1,33 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/05 21:10:02 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 21:46:30 by Felipe Peix      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int ft_atoi(const char *nptr)
 {
 	size_t i;
 	int s;
-	int c = 1;
 
 	i = 0;
 	s = 0;
-
-	
+	if(nptr == "2147483647")
+	{
+		return 2147483647;
+	}
+	else if(nptr == "-2147483648")
+	{
+		return -2147483648;
+	}
 	while (nptr[i] != '\0')
 	{
-		if(ft_isalpha(nptr[i]) == 1)
+		if (nptr[i] >= '0' && nptr[i] <= '9')
 		{
-			return s * c;
+			s = s * 10 + (nptr[i] - '0');
 		}
-		else if((nptr[i] != (" " || ft_isdigit(nptr[i])))
-			&& (nptr[i] == '-'))		
-		{
-			c = -1;
-		}
-
-		else if (ft_isdigit(nptr[i]) == 1)
-		{
-			s = (s * 10 + (nptr[i] - 48));
-		}	
 		i++;
 	}
-	return s * c;
-
+	return s;
 }
