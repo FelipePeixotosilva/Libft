@@ -1,22 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/05 18:13:04 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 18:42:28 by Felipe Peix      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *ptr1;
-	unsigned const char *ptr2;
-	int i;
+	size_t	i;
 
-	ptr1 = dest;
-	ptr2 = src;
 	i = 0;
-
-	while((ptr2[i] != '\0') && (n > 0))
+	while ((n > 0) && ((unsigned char *)src)[i] != '\0')
 	{
-	 	ptr1[i] = ptr2[i];
+		(((unsigned char *)dest)[i]) = ((unsigned char *)src)[i];
 		i++;
 		n--;
 	}
-
-	ptr1[i] = '\0';
-	return (ptr1);
-}	
+	return (((unsigned char *)dest));
+}
