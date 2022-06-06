@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 21:18:50 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/12 19:05:17 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/06/05 02:16:21 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 02:20:07 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	if ((c >= 32) && (c <= 176))
 	{
 		return (1);
 	}
