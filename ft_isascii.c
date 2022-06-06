@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 21:05:30 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/07 18:40:43 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/06/05 02:12:53 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 02:14:55 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
+	if ((c > 0) && (c < 177))
 	{
 		return (1);
 	}
