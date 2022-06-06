@@ -1,26 +1,27 @@
-#include "libft.h"
- 
-char *ft_strchr(const char *s, int c)
-{
-	int i;
-	char *ptr;
-	int pos;
-	i = 0;
-	pos = 0;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/05 02:28:33 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 02:37:04 by Felipe Peix      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	while (i <= ft_strlen(s))
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (n > 0)
 	{
-		if(s[i] == c)
-		{
-			while(s[i] != '\0')
-			{
-				ptr[pos] = s[i];
-				i++;
-				pos++;
-			}
-		}
+		((char *)s)[i] = c;
 		i++;
+		n--;
 	}
-	ptr[pos] = '\0';
-	return (ptr);	
+	return ((char *)s);
 }
