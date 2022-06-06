@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 13:39:53 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/05 20:48:15 by Felipe Peix      ###   ########.fr       */
+/*   Created: 2022/06/05 01:34:40 by Felipe Peix       #+#    #+#             */
+/*   Updated: 2022/06/05 02:02:47 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
