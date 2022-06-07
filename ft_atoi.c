@@ -3,37 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 21:10:02 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/05 21:46:30 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/07 19:34:42 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	size_t i;
-	int s;
+	size_t	i;
+	int		s;
+	int		j;
 
 	i = 0;
-	s = 0;
-	if(nptr == "2147483647")
+	s = 1;
+	j = 0;
+	while ((nptr[i] >= 7) && (nptr[i] <= 10)
+		|| (nptr[i] == 32) || (nptr[i] == '-') && (s != -1))
 	{
-		return 2147483647;
-	}
-	else if(nptr == "-2147483648")
-	{
-		return -2147483648;
-	}
-	while (nptr[i] != '\0')
-	{
-		if (nptr[i] >= '0' && nptr[i] <= '9')
+		if (nptr[i] == '-')
 		{
-			s = s * 10 + (nptr[i] - '0');
+			s = -1;
 		}
 		i++;
 	}
-	return s;
+	while ((nptr[i] != '\0') && (ft_isalnum(nptr[i]) == 1))
+	{
+		j = j * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (j * s);
 }
