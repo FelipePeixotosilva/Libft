@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:49:27 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/05 21:04:40 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/08 18:55:34 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = 0;
 	if(size > 0)
 	{
-		while ((src[j] != '\0') && (i < (size - (ft_strlen(dst)-1))))
+		while ((src[j] != '\0') && (i < (size)))
 		{
 			dst[i] = src[j];
 			i++;
