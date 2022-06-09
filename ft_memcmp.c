@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 16:45:12 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/05 17:04:59 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/09 18:35:03 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (ptr1[i] != ptr2[i])
 		{
-			return (((char *)s1)[i] - ((char *)s2)[i]);
+			return (ptr1[i] - ptr2[i]);
 		}
 		n--;
 		i++;
