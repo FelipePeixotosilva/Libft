@@ -6,13 +6,13 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 02:16:21 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/05 02:20:07 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/09 00:09:51 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if ((c >= 32) && (c <= 176))
+	if ((c >= 32) && (c <= 126))
 	{
 		return (1);
 	}
