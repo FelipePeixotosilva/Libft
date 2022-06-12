@@ -6,7 +6,7 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 17:13:13 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/05 17:16:36 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/11 22:18:36 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		{
 			return (s1[i] - s2[i]);
 		}
+		i++;
+		n--;
+		
 	}
 	return (0);
 }
