@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 21:10:02 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/07 19:34:42 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/12 20:09:01 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -22,19 +21,19 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	s = 1;
 	j = 0;
-	while ((nptr[i] >= 7) && (nptr[i] <= 10)
-		|| (nptr[i] == 32) || (nptr[i] == '-') && (s != -1))
-	{
-		if (nptr[i] == '-')
-		{
-			s = -1;
-		}
+	while ((nptr[i] >= '\t' && nptr[i] <= '\r') || (nptr[i] == 32))
 		i++;
-	}
-	while ((nptr[i] != '\0') && (ft_isalnum(nptr[i]) == 1))
+	if (nptr[i] == '-')
+	{
+		s = -1;
+		i++;
+	}	
+	else if (nptr[i] == '+')
+		i++;
+	while ((nptr[i] != '\0') && (ft_isdigit(nptr[i]) == 1))
 	{
 		j = j * 10 + (nptr[i] - '0');
 		i++;
-	}
+	}	
 	return (j * s);
 }
