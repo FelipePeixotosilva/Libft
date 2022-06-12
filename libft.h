@@ -6,15 +6,18 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:29:38 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/05/22 18:44:01 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/12 14:24:34 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
+# include <string.h>
 # include <stdlib.h>
 
+int		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -33,6 +36,14 @@ char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
-
+char    *ft_strdup(const char *s1);
+void *ft_calloc(size_t couny, size_t size);
+char *ft_strnstr(const char *big, const char *little, size_t len);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
+void ft_putendl_fd(char *s, int fd);
 
 #endif
