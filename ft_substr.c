@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 20:50:24 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/12 12:13:51 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/13 20:36:30 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	unsigned int	j;
 
+	if(len > ft_strlen(s))
+	{
+		len = ft_strlen(s);
+	}
 	ptr = (char *)malloc(len + 1);
 	i = start;
 	j = 0;
-	if (s == NULL)
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	while (j < len)
+	while (j < len && i < ft_strlen(s))
 	{
 		ptr[j] = s[i];
 		i++;
