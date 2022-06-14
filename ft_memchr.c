@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 17:39:50 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/11 16:23:54 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/14 18:29:38 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ void *ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	ptr = s;
+	
+	if(n == 0)
+	{
+		return (NULL);
+	}
 	while (n > 0)
 	{
 		if (((char *)s)[i] == c)
