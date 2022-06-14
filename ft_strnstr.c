@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 05:07:59 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/12 11:14:10 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/14 20:46:32 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	cont = 0;
 	i = 0;
-	if((len > 0) && (big != NULL) && (little != NULL))
-	{
-	while ((i < len ) && (big[i] != '\0'))
+	//len=len * -1;
+	if ((len  >= ft_strlen(big)))
+		len = ft_strlen(big)+1;
+	
+	while ((i < len) || (big[i]))
 	{
 		if(cont == ft_strlen(little))
 		{
@@ -37,7 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
-}
+
 	return (NULL);
 }
 
