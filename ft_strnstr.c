@@ -6,7 +6,7 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 05:07:59 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/15 09:19:32 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/15 09:23:04 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if(*little == 0)
 	{
-		return (char *)big;
+		return (char *)&big[i];
 	}
 	if ((len == 0) || (*big == 0))
 	{
@@ -35,7 +35,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j++;
 		if (little[j] == '\0')
 		{
-			return ((char *)big + i);
+			return ((char *)&big[i]);
 		}
 		}
 		i++;
