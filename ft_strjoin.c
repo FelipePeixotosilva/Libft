@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 19:13:11 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/15 20:45:47 by fpeixoto         ###   ########.fr       */
+/*   Created: 2022/06/08 18:10:11 by fpeixoto          #+#    #+#             */
+/*   Updated: 2022/06/15 20:40:16 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putnbr_fd(int n, int fd)
+
+char    *ft_strjoin(char const *s1, char const *s2)
 {
-    if(n == -2147483648)
+    char *ptr;
+    size_t s;
+    
+    s = (ft_strlen(s1) + ft_strlen(s2))+1;
+    ptr = (char *)malloc(s);
+    if(ptr == 0)
     {
-        ft_putstr_fd("-2147483648",fd);
-        return;
+        return NULL;
     }
-    if(n == 2147483647)
-    {
-        ft_putstr_fd("2147483647",fd);
-        return;
-    }
-    if(n < 0)
-    {
-        ft_putchar_fd('-',fd);
-        n = n * -1;
-    }
-    if(n >= 0 && n <= 9)
-    {
-        ft_putchar_fd(n + '0',fd);
-    }
-    else
-    {
-        ft_putnbr_fd(n/10,fd);
-        ft_putnbr_fd(n%10,fd);
-    }    
+    ft_strlcpy(ptr,s1,s);
+    ft_strlcat(ptr,s2,s);
+    
+    return(ptr);
 }
+
+/*#include <stdio.h>
+int main()
+{
+    char *test;
+    test = ft_strjoin("esta","certo");
+    printf("%s\n", test);
+}
+*/
 
