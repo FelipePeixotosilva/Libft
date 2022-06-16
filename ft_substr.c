@@ -38,14 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[j] = '\0';
 	return (ptr);
 }
-
-/*#include <stdio.h>
-int main()
-{
-    char str1 [] ="Testando";
-    char *str2; 
-    
-    str2=ft_substr(str1,3,4);
-    printf("%s\n",str2);   
-}
-*/
