@@ -6,7 +6,7 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:49:27 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/08 18:55:34 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/15 19:00:50 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t dst_len;
 	size_t j;
+	size_t limit;
 	
-	i = ft_strlen(dst);
-	j = 0;
-	if(size > 0)
+	dst_len = ft_strlen(dst);
+	if(size <= dst_len)
 	{
-		while ((src[j] != '\0') && (i < (size)))
-		{
-			dst[i] = src[j];
-			i++;
-			j++;
-		}
-		return (ft_strlen(dst) + ft_strlen(src));
+		return size + ft_strlen(src);
 	}
-	return (size + ft_strlen(src));
+	
+	limit = size - dst_len - 1;
+	j = 0;
+	
+	while (src[j] && j < limit)
+	{
+		dst[dst_len + j] = src[j];
+		j++;
+	}
+	dst[dst_len + j] = '\0';
+	return dst_len + ft_strlen(src);
 }
