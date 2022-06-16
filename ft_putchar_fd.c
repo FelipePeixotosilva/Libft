@@ -6,11 +6,11 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 12:19:53 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/12 12:44:37 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/16 11:04:40 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

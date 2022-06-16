@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 20:11:18 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/15 21:44:58 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/16 00:00:58 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 	
-	if((count == SIZE_MAX || size == SIZE_MAX))
+	if((count >= 2147483647 || size >= 2147483647))
 	{
 		return NULL;
 	}

@@ -6,17 +6,14 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 14:22:08 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/12 14:34:42 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/16 11:13:45 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void ft_putendl_fd(char *s, int fd)
 {
-	//char new;
-	//new = '\n';
 	if(s == NULL)
 	{
 		return ;

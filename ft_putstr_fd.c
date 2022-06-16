@@ -6,18 +6,24 @@
 /*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 12:50:05 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/12 13:09:29 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/16 11:02:35 by Felipe Peix      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-
+void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd)
 {
+	size_t i;
+	
+	i = 0;
 	if (s == NULL)
 	{
 		return ;
 	}
-	write (fd, s, ft_strlen(s));
+	while (i < ft_strlen(s))
+	{
+	ft_putchar_fd(s[i], fd);
+	i++;
+	}
 }
