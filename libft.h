@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 21:29:38 by Felipe Peix       #+#    #+#             */
-/*   Updated: 2022/06/12 20:33:50 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/17 02:40:04 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_itoa(int n);
+char    **ft_split(char const *s, char c);
+
 
 #endif
