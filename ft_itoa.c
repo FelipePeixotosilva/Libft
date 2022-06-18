@@ -63,7 +63,7 @@ char	*ft_itoa(int n)
 	while (n > 0)
 	{
 			i--;
-			ptr[i] = i n % 10 + '0';
+			ptr[i] = n % 10 + '0';
 			n = n / 10;
 	}
 	return (ptr);
