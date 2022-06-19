@@ -71,7 +71,7 @@ char	**ft_split(char const *s, char c)
 	while (s[i])
 	{
 		while (s[i] == c && s[i])
-		i++;
+			i++;
 		s_word = clet (s, i, c);
 		if (s[i] != '\0')
 			ptr[j] = ft_substr (s, i, s_word);
