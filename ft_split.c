@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Felipe Peixoto <felipe.peixoto@msn.com>    +#+  +:+       +#+        */
+/*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 16:32:48 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/19 11:42:13 by Felipe Peix      ###   ########.fr       */
+/*   Updated: 2022/06/20 00:59:35 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	cword(const char *s, int c)
+static size_t cword(const char *s, char c)
 {
-	size_t	count;
 	size_t	i;
 	size_t	key;
-
-	count = 0;
+	size_t	count;
+	
 	i = 0;
 	key = 0;
+	count = 0;
 	while (s[i])
 	{
 		while (s[i] == c && s[i])
@@ -32,68 +32,62 @@ static	size_t	cword(const char *s, int c)
 		}
 		if (key == 1)
 		{
-			count++;
 			key = 0;
+			count++;
 		}
 	}
 	return (count);
 }
 
-static	size_t	clet(const char *s, size_t index, int c)
+static size_t clet(const char *s, int index, char c)
 {
-	size_t	i;
-	size_t	count;
+	size_t count;
 
-	i = index;
 	count = 0;
-	while (s[i] != c && s[i])
+	while (s[index] != c && s[index])
 	{
 		count++;
-		i++;
-	}
+		index++;
+	}	
 	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	size_t	i;
-	size_t	j;
-	size_t	s_word;
+	char 	**ptr;
+	size_t 	index;
+	size_t 	j;
 
-	if (!s)
-		return (NULL);
-	ptr = malloc (sizeof (char *) * cword (s, c) + 1);
-	if (!ptr)
-		return (NULL);
-	i = 0;
+	index = 0;
 	j = 0;
-	while (s[i])
+	if (s == 0)
+		return NULL;
+	ptr = (char **)malloc (sizeof(char *) * cword(s,c) + 1);
+	if(ptr == NULL)
+		return NULL;
+	while (j < cword(s, c) && s[index])
 	{
-		while (s[i] == c && s[i])
-			i++;
-		s_word = clet (s, i, c);
-		if (s[i] != '\0')
-			ptr[j] = ft_substr (s, i, s_word);
-		j++;
-		while (s[i] != c && s[i])
-			i++;
+		while (s[index] == c && s[index])
+			index++;
+		if (s[index] != '\0')
+			ptr[j] = ft_substr(s, index, clet(s, index, c));
+		while(s[index] != c && s[index])
+			index++;
+		j++;	
 	}
-	ptr[j] = NULL;
-	return (ptr);
+	return ptr;
 }
 
 /*#include <stdio.h>
 int main()
 {
-    char **ptr;
-    int i;
-
-    i = 0;
-    ptr = ft_split("42 Rio !", ' ');
-    while (i < 3)
-    {
-        printf("ptr[%i] = %s\n",i, ptr[i]);
-        i++;
-    }
-}*/
+	char **ptr;
+	size_t i;
+	i = 0;
+	ptr = ft_split("42 Rio !",' ');
+	while(i < cword("42 Rio !",' '))
+	{
+	printf("%s\n", ptr[i]);
+	i++;
+	}
+	*/
