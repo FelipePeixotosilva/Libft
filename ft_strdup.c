@@ -6,7 +6,7 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:36:11 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/13 20:20:30 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/21 06:28:35 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	ptr = (char *)malloc(ft_strlen(s1) + 1);
-	if(ptr == NULL)
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
