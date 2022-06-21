@@ -6,100 +6,60 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 16:32:48 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/20 22:12:48 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/21 07:00:27 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-// static size_t cword(const char *s, char c)
-// {
-// 	size_t	i;
-// 	size_t	key;
-// 	size_t	count;
-	
-// 	i = 0;
-// 	key = 0;
-// 	count = 0;
-// 	while (s[i])
-// 	{
-// 		while (s[i] == c && s[i])
-// 			i++;
-// 		while (s[i] != c && s[i])
-// 		{
-// 			key = 1;
-// 			i++;
-// 		}
-// 		if (key == 1)
-// 		{
-// 			key = 0;
-// 			count++;
-// 		}
-// 	}
-// 		//printf("%lu\n",count);
-// 	return (count);
-// }
 
-/*static size_t clet(const char *s, int index, char c)
+static int	ft_count(const char *s, char c)
 {
-	size_t count;
+	size_t	count;
+	size_t	index;
+	size_t	start;
 
 	count = 0;
-	while (s[index] != c && s[index])
-	{
-		count++;
-		index++;
-	}	
-	return (count);
-}*/
-
-static int ft_count(const char *s, char c)
-{
-	size_t count;
-	size_t index;
-	size_t start;
-
-	count  = 0;
 	index = 0;
 	while (s[index])
 	{
 		while (s[index] == c && s[index])
-			index++;
+				index++;
 		start = index;
-		while(s[index] != c && s[index])
-			index++;
+		while (s[index] != c && s[index])
+				index++;
 		if (start != index)
 			count++;
 	}
-	return count;	
+	return (count);
 }
+
 char	**ft_split(char const *s, char c)
 {
-	char 	**ptr;
-	size_t 	index;
-	size_t 	j;
-	size_t start;
+	char	**ptr;
+	size_t	index;
+	size_t	j;
+	size_t	start;
 
 	index = 0;
 	j = 0;
-	
 	if (s == 0)
-		return NULL;
+		return (NULL);
 	ptr = malloc(sizeof(char *) * (ft_count(s, c) + 1));
-	if(ptr == NULL)
-		return NULL;
+	if (ptr == NULL)
+		return (NULL);
 	while (s[index])
 	{
 		while (s[index] == c && s[index])
-			index++;
+				index++;
 		start = index;
-		while(s[index] != c && s[index])
-			index++;
+		while (s[index] != c && s[index])
+				index++;
 		if (start != index)
-			ptr[j++] = ft_substr(s, start ,index - start);
+				ptr[j++] = ft_substr(s, start, index - start);
 	}
 	ptr[j] = NULL;
-	return ptr;
+	return (ptr);
 }
 
 // #include <stdio.h>
@@ -115,6 +75,4 @@ char	**ft_split(char const *s, char c)
 // 	printf("%s\n", ptr[i]);
 // 	i++;
 // 	}*/
-	
 // }
-
