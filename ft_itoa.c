@@ -6,7 +6,7 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 16:15:45 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/17 01:55:55 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/20 21:58:41 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char	*ft_itoa(int n)
 	}
 	i = qnbr(n);
 	ptr = (char *)malloc((sizeof(char) * qnbr(n)) + 1);
+	if (ptr == 0)
+		return NULL;
 	if (n == 0)
 		ptr[0] = '0';
 	ptr[i] = '\0';
