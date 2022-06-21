@@ -6,7 +6,7 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:32:22 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/21 19:34:42 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/21 19:46:08 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ char	*ft_strtrim(char const *s1, char const *set)
     while (s1[start] && ft_strchr(set, s1[start]))
         start++;
     end = ft_strlen(s1);
-    while (end > start && ft_strrchr(set, s1[end - 1]))
+    while (end > start && ft_strrchr(set, s1[end]))
         end--;
-    ptr = ft_substr(s1,start,end);
+    ptr = ft_substr(s1,start,(end - start) + 1);
+    
     if(ptr == 0)
         return NULL;
-    
-    ptr[end++] = '\0'; 
+
     return ptr;
 }
 
@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 int main()
 {
     char *ptr;
-    ptr = ft_strtrim("felipepe", "fi");
+    ptr = ft_strtrim("abcdba", "acb");
     printf("%s\n", ptr);
     
 }*/
