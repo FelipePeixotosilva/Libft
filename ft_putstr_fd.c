@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void	ft_putchar_fd(char c, int fd);
+
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	if (s == NULL)
 	{
@@ -23,7 +23,7 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 	while (i < ft_strlen(s))
 	{
-	ft_putchar_fd(s[i], fd);
-	i++;
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
 }
