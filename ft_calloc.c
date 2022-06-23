@@ -6,7 +6,7 @@
 /*   By: fpeixoto <fpeixoto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 20:11:18 by fpeixoto          #+#    #+#             */
-/*   Updated: 2022/06/21 06:00:16 by fpeixoto         ###   ########.fr       */
+/*   Updated: 2022/06/23 20:22:10 by fpeixoto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count == 0 || size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
 	ptr = (void *)malloc((size * count));
 	if (ptr == NULL)
 	{
