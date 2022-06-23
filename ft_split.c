@@ -60,18 +60,3 @@ char	**ft_split(char const *s, char c)
 	ptr[j] = NULL;
 	return (ptr);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char **ptr;
-// 	size_t i;
-// 	i = 0;
-// 	//printf("%lu\n", clet("hoje",0,3));
-// 	ptr = ft_split("      split       this for   me  !       ",' ');
-// 	/*while(i < 6)
-// 	{
-// 	printf("%s\n", ptr[i]);
-// 	i++;
-// 	}*/
-// }
