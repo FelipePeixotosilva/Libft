@@ -29,12 +29,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, (size * count));
 	return (ptr);
 }
-
-/*#include <stdio.h>
-int main()
-{
-    char *str;
-    str = (char *)ft_calloc(5,10);
-
-    printf("%s\n", str);
-}*/
