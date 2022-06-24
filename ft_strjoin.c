@@ -27,12 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat (ptr, s2, s);
 	return (ptr);
 }
-
-/*#include <stdio.h>
-int main()
-{
-    char *test;
-    test = ft_strjoin("esta","certo");
-    printf("%s\n", test);
-}
-*/
