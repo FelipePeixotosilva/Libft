@@ -14,32 +14,20 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-   
-    size_t start;
-    size_t end;
-    char *ptr;
-    
-    if(s1 == NULL || set == NULL )
-        return NULL;
-    start = 0;
-    while (s1[start] && ft_strchr(set, s1[start]))
-        start++;
-    end = ft_strlen(s1);
-    while (end > start && ft_strrchr(set, s1[end]))
-        end--;
-    ptr = ft_substr(s1,start,(end - start) + 1);
-    
-    if(ptr == 0)
-        return NULL;
+	size_t	start;
+	size_t	end;
+	char	*ptr;
 
-    return ptr;
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_strrchr(set, s1[end]))
+		end--;
+	ptr = ft_substr(s1, start, (end - start) + 1);
+	if (ptr == 0)
+		return (NULL);
+	return (ptr);
 }
-
-/*#include <stdio.h>
-int main()
-{
-    char *ptr;
-    ptr = ft_strtrim("abcdba", "acb");
-    printf("%s\n", ptr);
-    
-}*/
